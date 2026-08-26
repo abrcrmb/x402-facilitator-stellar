@@ -30,7 +30,13 @@
    ```bash
    npx validate-discovery metadata.json
    ```
-4. **Verify listing:** Check the Bazaar endpoint to ensure you are listed.
+4. **Verify listing:** Check the Bazaar endpoint to ensure you are listed. Your
+   payment responses also tell you directly: every successful `/verify` and
+   `/settle` response carries an `EXTENSION-RESPONSES` header describing what
+   the Bazaar did with your resource (landed, partially landed, rejected, or
+   not attempted) — see [docs/BAZAAR.md#the-extension-responses-header](BAZAAR.md#the-extension-responses-header)
+   for the encoding, all four outcomes, and what to do about each rejection
+   code.
 5. **Troubleshooting:**
    - *Error: Trustline missing.* Ensure you have an active trustline for the asset.
    - *Error: Invalid signature.* Ensure the agent signs with the correct private key.
