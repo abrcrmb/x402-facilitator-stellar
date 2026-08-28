@@ -1,4 +1,4 @@
-# Seller Guide
+# Seller Guide: from zero to a paid, discoverable endpoint on Stellar testnet
 
 1. **Add X402 to an existing Express API:** Add the `@x402/core` middleware to intercept requests.
 2. **Choose an asset and price:** Setup a trustline for USDC receipt. (See our demo-merchant example).
